@@ -103,6 +103,7 @@
             color: #3897f0;
         }
     </style>
+    <?php echo form_open('outgoing/add'); ?>
     <div class="wrapper">
 	<div class="header">
 		<div class="top">
@@ -111,16 +112,16 @@
 			</div>
 			<div class="form">
 				<div class="input_field">
-					<select name="propoption" value="Choose" class="input">
+					<select name="productId" value="Choose" class="input">
                     <?php foreach ($products as $product): ?>
-                        <option><?php echo $product->productId ?></option>
+                        <option value="<?php echo $product->productId ?>"><?php echo $product->product_Name ?></option>
                         <?php endforeach; ?>
                     </select>
-                    <small class="text-danger"><?php echo form_error(''); ?></small>
+                    <small class="text-danger"><?php echo form_error('productId'); ?></small>
 				</div>
 				<div class="input_field">
-					<input type="text" placeholder="Enter the product quantity" name="prodquantity" class="input">
-                    <small class="text-danger"><?php echo form_error('brand'); ?></small>
+					<input type="text" placeholder="Enter the product quantity" name="quantity" class="input">
+                    <small class="text-danger"><?php echo form_error('quantity'); ?></small>
 				</div>
 				<div class="btn"><button type="submit">Register Outgoing</button></div>
 			</div>
@@ -131,8 +132,8 @@
 			</div>
 			
 		</div>
-		
 	</div>
+    <?php echo form_close(); ?>
 </div>
 </body>
 </html>

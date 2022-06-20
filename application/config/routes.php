@@ -57,6 +57,7 @@ $route['login'] = 'login/login';
 $route['signup'] = 'signup/signup';
 $route['products'] = 'products/products';
 $route['outgoing'] = 'outgoingController/outgoing';
+$route['outgoing/add'] = 'outgoingController/store';
 $route['inventory'] = 'inventory/inventory';
 $route['user'] = 'UserController/user';
 $route['products/add'] = 'products/store';
@@ -75,3 +76,5 @@ $route['products/delete/(:any)'] = 'products/delete/$1';
 $route['signup/add'] = 'signup/store';
 
 $route['display/product'] = 'products/display';
+
+// $route['outgoing/add'] = 'outgoingController/store';
