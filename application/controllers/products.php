@@ -41,6 +41,7 @@ class Products extends CI_Controller {
         $data['product'] = $this->ProductsModel->editProduct($id);
         $this->load->view('editProduct',$data);
     }
+    
 }
 
 ?>

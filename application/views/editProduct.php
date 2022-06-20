@@ -111,7 +111,7 @@
         }
 
     </style>
-    <?php echo form_open('products/add'); ?>
+    <?php echo form_open('products/update/'.$product->productId); ?>
     
 <div class="wrapper">
 	<div class="header">

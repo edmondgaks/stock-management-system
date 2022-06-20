@@ -61,6 +61,7 @@ $route['inventory'] = 'inventory/inventory';
 $route['user'] = 'UserController/user';
 $route['products/add'] = 'products/store';
 $route['products/edit/(:any)'] = 'products/edit/$1';
+$route['products/update/(:any)'] = 'products/update/$1';
 $route['display/user'] = 'UserController/display';
 $route['signup/add'] = 'signup/store';
 
