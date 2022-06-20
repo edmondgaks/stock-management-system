@@ -41,9 +41,24 @@ class Products extends CI_Controller {
         $data['product'] = $this->ProductsModel->editProduct($id);
         $this->load->view('editProduct',$data);
     }
-    public function update() {
-        $this->load->model('ProductsModel');
-        $this->ProductsModel->updateProduct();
+    public function update($id) {
+        $this->form_validation->set_rules('prodname','prodname','required');
+        $this->form_validation->set_rules('brand','brand','required');
+        $this->form_validation->set_rules('sphone','sphone','required');
+        $this->form_validation->set_rules('supplier','supplier','required');
+        if($this->form_validation->run()) :
+            $data = [
+                "product_Name" => $this->input->post('prodname'),
+                "brand" => $this->input->post('brand'),
+                "supplier_phone" => $this->input->post('sphone'),
+                "supplier" => $this->input->post('supplier')
+            ];
+            $this->load->model('ProductsModel');
+            $this->ProductsModel->updateProduct($data,$id);
+            redirect(base_url('products/add'));
+        else : 
+            $this->edit($id);
+        endif;
     }
 }
 
