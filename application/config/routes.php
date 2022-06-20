@@ -78,3 +78,6 @@ $route['signup/add'] = 'signup/store';
 $route['display/product'] = 'products/display';
 
 // $route['outgoing/add'] = 'outgoingController/store';
+
+
+$route['home'] = 'home/home';
