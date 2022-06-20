@@ -7,9 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body class="w-full">
-    <div class='flex dark:bg-main-dark-bg'>
-        <div class='w-4/12 fixed sidebar bg-slate-300'>
+<body class="h-screen">
+    <div class='flex dark:bg-main-dark-bg h-screen'>
+        <div class='w-4/12 sidebar bg-slate-300'>
             <div class='ml-3 h-screen md:overflow-hidden  overflow-auto md:hover:overflow-auto pb-10'>
                 <span class="p-8">Stock Management system</span>
                 <div class='mt-10'>
@@ -31,8 +31,8 @@
                 </div>
             </div>
         </div>
-        <div class="justify-center">
-            
+        <div class="w-8/12 flex justify-center">
+            <h1 class="text-black">Stock management system</h1>
         </div>
     </div>
 </body>
