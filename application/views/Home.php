@@ -7,8 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body>
-    <div class='flex relative dark:bg-main-dark-bg w-full'>
+<body class="w-full">
+    <div class='flex dark:bg-main-dark-bg'>
         <div class='w-4/12 fixed sidebar bg-slate-300'>
             <div class='ml-3 h-screen md:overflow-hidden  overflow-auto md:hover:overflow-auto pb-10'>
                 <span class="p-8">Stock Management system</span>
@@ -20,16 +20,19 @@
                         <a href="<?php echo base_url('products/add') ?>" class="text-black m-3 mt-4 uppercase">Register Product</a>
                     </div>
                     <div class="p-5 hover:bg-slate-400">
+                        <a href="<?php echo base_url('display/user') ?>" class="text-black m-3 mt-4 uppercase">View Users</a>
+                    </div>
+                    <div class="p-5 hover:bg-slate-400">
                         <a href="<?php echo base_url('outgoing') ?>" class="text-black m-3 mt-4 uppercase">Outgoing</a>
                     </div>
                     <div class="p-5 hover:bg-slate-400">
                         <a href="<?php echo base_url('inventory') ?>" class="text-black m-3 mt-4 uppercase">Inventory</a>
                     </div>
-                    <!-- <div class="p-5">
-                        <a class="text-gray-400 m-3 mt-4 uppercase">Users</a>
-                    </div> -->
                 </div>
             </div>
+        </div>
+        <div class="justify-center">
+            
         </div>
     </div>
 </body>

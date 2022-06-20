@@ -13,6 +13,9 @@
             <button class="btn btn-primary my-5">
                 <a href="<?php echo base_url('signup/add') ?>" class="text-light">Add user</a>
             </button>
+            <button class="btn btn-primary my-5">
+                <a href="<?php echo base_url('home') ?>" class="text-light">Go back to Home</a>
+            </button>
             
             
             <table class="table" id="userTable">
