@@ -13,6 +13,9 @@
             <button class="btn btn-primary my-5">
                 <a href="<?php echo base_url('products/add') ?>" class="text-light">Add Product</a>
             </button>
+            <button class="btn btn-primary my-5">
+                <a href="<?php echo base_url('home') ?>" class="text-light">Back to the home</a>
+            </button>
             
         <table class="table" id="tableProduct">
             <thead>
