@@ -27,8 +27,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($products as $product):
-                        ?>
+                <?php foreach ($products as $product): ?>
                         
                 <tr>
                     <td><?php echo $product->productId ?></td>
@@ -39,7 +38,7 @@
                     <td><?php echo $product->added_date ?></td>
                     <td>
                         <a class="btn btn-primary" href="<?php echo base_url('products/edit/'.$product->productId) ?>">Update</a>
-                        <a class="btn btn-danger">Delete</a>
+                        <a class="btn btn-danger" href="<?php echo base_url('products/delete/'.$product->productId); ?>">Delete</a>
                     </td>            
                 </tr>
                 <?php endforeach; ?>

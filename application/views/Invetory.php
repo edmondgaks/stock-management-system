@@ -11,187 +11,130 @@
 
 <body>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
-*{
-    font-family: 'Quicksand', sans-serif;
-}
-body{
-    background-color: dodgerblue;
-}
-.main{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: dodgerblue;
-}
-.main2{
-    width: 60%;
-    height: 98vh;
-    background: #fff;
-}
+        @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-.image{
-    margin-top: 200px;
-    margin-left: 100px;
-}
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+        }
 
-.intro{
-    
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 25vh;
-    margin-top: 5%;
-}
+        body{
+            background: #fafafa;
+            font-size: 14px;
+        }
 
-.forms{
-    width: 40%;
-    margin-left: auto;
-    height: 55vh;
-    margin-right: auto;
-    margin-top: 2%;
-}
+        .wrapper .header{
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+            margin: 50px auto;
+        }
 
+        .wrapper .header .top,
+        .wrapper .signup{
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            border-radius: 1px;
+            padding: 40px 40px 20px;
+        }
 
+        .wrapper .header .logo h3{
+            display: block;
+            margin: 0 auto 35px;
+        }
 
-.logoImg{
-    height: 10vh;
-    width: 8vw;
-    background-color: #fff;
-    border-radius: 50%;
-    margin-left: 8px;
-}
+        .wrapper .header .form .input_field{
+            margin-bottom: 5px;
+        }
 
-.logo{
-    width: 12vw;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 2%;
-}
+        .wrapper .header .form .input_field .input{
+            width: 100%;
+            background: #fafafa;
+            border: 1px solid #efefef;
+            font-size: 12px;
+            border-radius: 3px;
+            color: #262626;
+            padding: 10px;
+        }
 
-.logo >h3{
-    margin-left: 10px;
-    font-size: 22px;
-    margin-top: -4px;
-}
+        .wrapper .header .form .input_field .input:focus{
+            border: 1px solid #b2b2b2;
+        }
 
-.logodesc{
-    margin-left: 10px;
-    margin-right: 10px;
-}
+        .wrapper .header .form button{
+            margin: 10px 0;
+            background-color: #3897f0;
+            border: 1px solid #3897f0;
+            border-radius: 4px;
+            text-align: center;
+            padding: 5px;
+        }
+        .wrapper .header .or{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 15px;
+            margin: 15px 0 20px;
+        }
 
-.logodesc >h4{
-    font-weight: normal;
-}
+        .wrapper .header .or .line{
+            width: 105px;
+            height: 2px;
+            background: #efefef
+        }
 
-.desc{
-    display: flex;
-    font-size: 20px;
-    color:rgb(7, 70, 207); ;
-}
-
-.forms{
-    display: flex;
-    flex-direction: column;
-}
-
-.forms >input , select{
-background: #fff;
-border: 1px solid grey;
-height: 7vh;
-margin-top: 2vh;
-width: 80%;
-margin-left: 10%;
-margin-right: 10%;
-border-radius: 7px;
-padding-left: 10px;
-font-size: 18px;
-color: black;
-}
+        .wrapper .header .or p{
+            color: #999;
+            font-size: 12px;
+        }
 
 
-.desc >input{
-    margin-top: 5.5%;
-    margin-left: 10%;
-}
+        .wrapper .signup{
+            margin: 10px 0 20px;
+            padding: 25px 40px;
+            text-align: center;
+            color: #262626;
+        }
 
-.desc :nth-child(2){
-    margin-left: 2%;
-}
-
-.desc :nth-child(3){
-    margin-left: auto;
-    margin-right: 7%;
-}
-
-.forms > button{
-    background: rgb(7, 70, 207);;
-    border: none;
-    height: 7vh;
-    margin-top: 3vh;
-    width: 83%;
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 7px;
-    padding-left: 10px;
-    font-size: 18px;
-    color: white;    
-}
-
-.forms >label{
-    margin-left: 10%;
-    margin-top: 12px;
-    font-weight: bold;
-    font-size: 24px;
-}
-
+        .wrapper .signup a{
+            color: #3897f0;
+        }
     </style>
-    <div class="main">
-        <div class="main2">
-            <div class="intro">
-                <div class="logo">
-                    <h3>Stock Invetory </h3>
-                </div>
-                <div class="logodesc">
-                    <h4>Welcome Back to your Stock Please Enter the needed information inorder to register an invetory</h4>
-                </div>
-            </div>
-
-            <form action="" method="POST">
-
-                <div class="forms">
-                    <label for="">Quantity</label>
-                    <input type="text" name="" id="" placeholder="Enter The Quantity">
-                    <label for="">Product Id</label>
-                    <select name="product_id" id="">
-                        <?php
-                        require '../../connection/connection.php';
-
-                        if (!$connect) {
-                            echo "<h1>Connection Failed</h1>";
-                        } else {
-                            $query = "SELECT * FROM products";
-                            $stmt = $conn->connect()->query($query);
-
-                            if (!$fetch) {
-                                echo "it failed";
-                            } else {
-                                while($row = mysqli_fetch_assoc($fetch)) {
-                        ?>
-
-                                    <option value="<?php echo $row['productId'] ?>"><?php echo  $row['productId'] ?></option>
-                        <?php }
-                            }
-                        } ?>
+    <div class="wrapper">
+	<div class="header">
+		<div class="top">
+			<div class="logo">
+				<h3>Stock Management system</h3>
+			</div>
+			<div class="form">
+                <div class="input_field">
+                    <input type="text" placeholder="Enter the product quantity" name="quantity" class="input">
+                    <small class="text-danger"><?php echo form_error('quantity'); ?></small>
+				</div>
+                <div class="input_field">
+                    <select name="productId" class="input">
+                    <?php foreach ($products as $product): ?>
+                        <option><?php echo $product->productId ?></option>
+                    <?php endforeach; ?>
                     </select>
-                    
-                    <button type="submit">Register Invetory</button>
+                    <small class="text-danger"><?php echo form_error('productId'); ?></small>
                 </div>
-            </form>
-
-        </div>
-    </div>
+                <div class="btn"><button type="submit">Register Outgoing</button></div>
+			</div>
+			<div class="or">
+				<div class="line"></div>
+				<p>OR</p>
+				<div class="line"></div>
+			</div>
+			
+		</div>
+		
+	</div>
 </body>
 
 </html>

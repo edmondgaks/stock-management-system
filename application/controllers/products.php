@@ -60,6 +60,11 @@ class Products extends CI_Controller {
             $this->edit($id);
         endif;
     }
+    public function delete($id) {
+        $this->load->model('ProductsModel');
+        $this->ProductsModel->deleteProduct($id);
+        redirect(base_url('/products/display'));
+    }
 }
 
 ?>

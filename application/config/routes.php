@@ -56,7 +56,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'login/login';
 $route['signup'] = 'signup/signup';
 $route['products'] = 'products/products';
-$route['outgoing'] = 'outgoing/outgoing';
+$route['outgoing'] = 'outgoingController/outgoing';
 $route['inventory'] = 'inventory/inventory';
 $route['user'] = 'UserController/user';
 $route['products/add'] = 'products/store';
@@ -64,8 +64,13 @@ $route['products/edit/(:any)'] = 'products/edit/$1';
 $route['products/update/(:any)'] = 'products/update/$1';
 $route['display/user'] = 'UserController/display';
 
+
+
 $route['user/edit/(:any)'] = 'UserController/edit/$1';
 $route['user/update/(:any)'] = 'UserController/update/$1';
+$route['user/delete/(:any)'] = 'UserController/delete/$1';
+
+$route['products/delete/(:any)'] = 'products/delete/$1';
 
 $route['signup/add'] = 'signup/store';
 

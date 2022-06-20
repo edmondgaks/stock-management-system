@@ -34,7 +34,7 @@
                     <td><?php echo $user->email ?></td>
                     <td>
                         <a class="btn btn-primary" href="<?php echo base_url('user/edit/'.$user->id) ?>">Update</a>
-                        <a class="btn btn-danger">Delete</a>
+                        <a class="btn btn-danger" href="<?php echo base_url('user/delete/'.$user->id); ?>">Delete</a>
                     </td>            
                 </tr>
                 <?php endforeach; ?>

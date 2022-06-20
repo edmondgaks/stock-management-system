@@ -32,5 +32,10 @@ class UserController extends CI_Controller
             $this->edit($id);
         endif;
     }
+    public function delete($id) {
+        $this->load->model('UserModel');
+        $this->UserModel->deleteUser($id);
+        redirect(base_url('/display/user'));
+    }
 }
 ?>

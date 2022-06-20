@@ -15,6 +15,9 @@ class ProductsModel extends CI_Model {
     public function updateProduct($data,$id) {
         $this->db->update('products',$data,['productId' => $id]);
     }
+    public function deleteProduct($id) {
+        return $this->db->delete('products',['productId'=> $id]);
+    }
 }
 
 ?>
