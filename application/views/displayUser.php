@@ -33,8 +33,8 @@
                     <td><?php echo $user->lastname ?></td>
                     <td><?php echo $user->email ?></td>
                     <td>
-                        <button class="btn btn-primary">Update</button>
-                        <button class="btn btn-danger">Delete</button>
+                        <a class="btn btn-primary" href="<?php echo base_url('user/edit/'.$user->id) ?>">Update</a>
+                        <a class="btn btn-danger">Delete</a>
                     </td>            
                 </tr>
                 <?php endforeach; ?>
