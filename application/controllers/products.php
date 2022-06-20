@@ -55,7 +55,7 @@ class Products extends CI_Controller {
             ];
             $this->load->model('ProductsModel');
             $this->ProductsModel->updateProduct($data,$id);
-            redirect(base_url('products/add'));
+            redirect(base_url('products/display'));
         else : 
             $this->edit($id);
         endif;
