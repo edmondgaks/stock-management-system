@@ -12,6 +12,9 @@ class ProductsModel extends CI_Model {
         $query = $this->db->get_where('products', ['productId' => $id]);
         return $query->row();
     }
+    public function updateProduct() {
+        
+    }
 }
 
 ?>
