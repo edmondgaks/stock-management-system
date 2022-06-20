@@ -70,7 +70,7 @@ $route['inventory/add'] = 'inventory/store';
 $route['user/edit/(:any)'] = 'UserController/edit/$1';
 $route['user/update/(:any)'] = 'UserController/update/$1';
 $route['user/delete/(:any)'] = 'UserController/delete/$1';
-
+$route['user/confirmdelete/(:any)']['DELETE'] = 'UserController/delete/$1';
 $route['products/delete/(:any)'] = 'products/delete/$1';
 
 $route['signup/add'] = 'signup/store';

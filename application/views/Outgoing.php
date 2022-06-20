@@ -130,7 +130,6 @@
 				<p>OR</p>
 				<div class="line"></div>
 			</div>
-			
 		</div>
 	</div>
     <?php echo form_close(); ?>
