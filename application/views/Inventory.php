@@ -105,6 +105,7 @@
             color: #3897f0;
         }
     </style>
+    <?php echo form_open('inventory/add'); ?>
     <div class="wrapper">
 	<div class="header">
 		<div class="top">
@@ -119,7 +120,7 @@
                 <div class="input_field">
                     <select name="productId" class="input">
                     <?php foreach ($products as $product): ?>
-                        <option><?php echo $product->productId ?></option>
+                        <option value="<?php echo $product->productId ?>"><?php echo $product->product_Name ?></option>
                     <?php endforeach; ?>
                     </select>
                     <small class="text-danger"><?php echo form_error('productId'); ?></small>
@@ -131,10 +132,9 @@
 				<p>OR</p>
 				<div class="line"></div>
 			</div>
-			
 		</div>
-		
 	</div>
+    <?php echo form_close(); ?>
 </body>
 
 </html>

@@ -22,7 +22,6 @@ class outgoingController extends CI_Controller {
                 'productId'=>$this->input->post('productId'),
                 'quantity'=>$this->input->post('quantity')
             );
-    
             $this->load->model('OutgoingModel');
             $this->OutgoingModel->insertOutgoing($data);
             redirect('products/display');
