@@ -85,4 +85,6 @@ $route['display/outgoing'] = 'outgoingController/display';
 // $route['outgoing/add'] = 'outgoingController/store';
 
 
+$route['printProducts'] = 'products/print';
+
 $route['home'] = 'home/home';

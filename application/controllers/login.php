@@ -30,7 +30,7 @@ class login extends CI_Controller {
                 ];
                 $this->session->set_userdata('authenticated','1');
                 $this->session->set_userdata('auth_user',$auth_userdetails);
-                $this->session->set_flashdata('status','Invalid Email id or password');
+                $this->session->set_flashdata('status','Logged In successful');
                 redirect(base_url('home'));
             } else {
                 $this->session->set_flashdata('status','Invalid Email');
