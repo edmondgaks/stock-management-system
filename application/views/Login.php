@@ -61,19 +61,19 @@
             border: 1px solid #b2b2b2;
         }
 
-        .wrapper .header .form .btn{
+        .wrapper .header .form button{
             margin: 10px 0;
             background-color: #3897f0;
             border: 1px solid #3897f0;
             border-radius: 4px;
             text-align: center;
-            padding: 5px;
+            padding: 8px 30px;
         }
 
-        .wrapper .header .form .btn a{
+        /* .wrapper .header .form .btn a{
             color: #fff;
             display: block;
-        }
+        } */
 
         .wrapper .header .or{
             display: flex;
@@ -107,20 +107,28 @@
         }
 
     </style>
+    <?php echo form_open('login'); ?>
 <div class="wrapper">
-	<div class="header">
-		<div class="top">
+    <div class="header">
+        <div class="top">
+            <?php if($this->session->flashdata('status')): ?>
+                <div class="alert alert-success">
+                    <?= $this->session->flashdata('status'); ?>
+                </div>
+                <?php endif; ?>
 			<div class="logo">
 				<h3>Stock Management system</h3>
 			</div>
 			<div class="form">
 				<div class="input_field">
 					<input type="email" placeholder="Enter your email" name="email" class="input">
+                    <small class="text-danger"><?php echo form_error('email'); ?></small>
 				</div>
 				<div class="input_field">
 					<input type="password" placeholder="Enter your password" name="password" class="input">
+                    <small class="text-danger"><?php echo form_error('password'); ?></small>
 				</div>
-				<div class="btn"><a href="#">Login</a></div>
+				<div class="btn"><button type="submit" name="submit">Login</button></div>
 			</div>
 			<div class="or">
 				<div class="line"></div>
@@ -133,6 +141,7 @@
 			<p>Don't have an account <a href="<?php echo base_url('/signup') ?>">Sign up</a></p>
 		</div>
 	</div>
+    <?php echo form_close(); ?>
 </div>
 
 </body>

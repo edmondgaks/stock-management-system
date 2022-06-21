@@ -29,7 +29,7 @@
                         <a href="<?php echo base_url('display/outgoing') ?>" class="text-black m-3 mt-4 uppercase">View Outgoings</a>
                     </div>
                     <div class="p-5 hover:bg-slate-400">
-                        <a href="<?php echo base_url('display/user') ?>" class="text-black m-3 mt-4 uppercase">View Inventories</a>
+                        <a href="<?php echo base_url('display/inventory') ?>" class="text-black m-3 mt-4 uppercase">View Inventories</a>
                     </div>
                     <div class="p-5 hover:bg-slate-400">
                         <a href="<?php echo base_url('inventory') ?>" class="text-black m-3 mt-4 uppercase">Inventory</a>

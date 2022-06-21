@@ -43,7 +43,7 @@
     <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready( function () {
-            $('#tableProduct').DataTable();
+            $('#tableOutgoing').DataTable();
         });
     </script>
 

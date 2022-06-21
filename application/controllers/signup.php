@@ -31,7 +31,7 @@ class signup extends CI_Controller {
             );
             $this->load->model('UserModel');
             $this->UserModel->insertUser($data);
-            redirect('/products/add');
+            redirect('/home');
         }
     
     }
