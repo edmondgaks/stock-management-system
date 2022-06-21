@@ -28,6 +28,11 @@ class inventory extends CI_Controller {
             redirect('products/display');
         }
     }
+    public function display() {
+        $this->load->model('inventoryModel');
+        $data['inventory'] = $this->inventoryModel->getInventory();
+        $this->load->view('displayInventory',$data);
+    }
 }
 
 ?>

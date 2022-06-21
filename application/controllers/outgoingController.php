@@ -27,4 +27,9 @@ class outgoingController extends CI_Controller {
             redirect('products/display');
         }
     }
+    public function display() {
+        $this->load->model('OutgoingModel');
+        $data['outgoings'] = $this->OutgoingModel->getOutgoing();
+        $this->load->view('displayOutgoing',$data);
+    }
 }

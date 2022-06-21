@@ -76,7 +76,9 @@ $route['products/delete/(:any)'] = 'products/delete/$1';
 $route['signup/add'] = 'signup/store';
 
 $route['display/product'] = 'products/display';
-
+$route['outgoing/display'] = 'outgoingController/display';
+$route['display/inventory'] = 'inventory/display';
+$route['display/outgoing'] = 'outgoingController/display';
 // $route['outgoing/add'] = 'outgoingController/store';
 
 
